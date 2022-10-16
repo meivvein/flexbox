@@ -3,7 +3,8 @@
 :root {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 16px;
-    --width: 80%
+    --width: max(80%, 100vh);
+    --height: calc(100vh - 11.5rem - 100px - (1.5rem - 6px));
 }
 
 body {
@@ -54,12 +55,34 @@ main {
 }
 
 main article {
-    background-color: lightgray;
+    height: calc(var(--height) - 4px);
+    border: 2px solid #1b1924;
+    overflow: hidden;
 }
 
 main nav {
-    height: calc(100vh - 11.5rem - 100px - (1.5rem - 6px));
+    height: var(--height);
     overflow: scroll;
+}
+
+main img, main article div {
+    max-height: calc((var(--height) - 4px) / 3 - 2rem);
+}
+
+main article div {
+    padding: 1rem;
+}
+
+main article div:nth-child(2n) {
+    background-color: lightgray;
+}
+
+main article div:nth-child(2n+1) {
+    background-color: rgb(190, 190, 190);
+}
+
+main img {
+    aspect-ratio: 1 / 1;
 }
 
 h2 {
