@@ -5,7 +5,6 @@ const f = document.querySelector("#displayFlex");
 f.addEventListener('change', function(){
     if (f.checked == true) {
         place.style.display="flex";
-        console.log("lol");
     }
     else {
         place.style.display="block";
@@ -93,4 +92,12 @@ document.querySelector("#AlignContentSpaceBetween").addEventListener('change', f
 })
 document.querySelector("#AlignContentSpaceAround").addEventListener('change', function(){
     place.style.alignContent="space-around";
+})
+
+window.addEventListener("load", function() {
+    document.querySelector("#flexDirectionRow").click()
+    document.querySelector("#flexWrapNowrap").click()
+    document.querySelector("#justifyContentFlexStart").click()
+    document.querySelector("#alignItemsStretch").click()
+    document.querySelector("#AlignContentStretch").click()
 })
