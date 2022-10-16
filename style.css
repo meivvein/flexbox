@@ -119,3 +119,13 @@ main a {
 main a:hover {
     color: rgb(240, 90, 36);
 }
+
+footer a {
+    color: white;
+    text-decoration: underscore;
+    transition: .1s ease-in-out;
+}
+
+footer a:hover {
+    color: #1b1924;
+}
