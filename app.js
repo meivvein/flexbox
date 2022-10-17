@@ -97,6 +97,25 @@ document.querySelector("#AlignContentSpaceEvenly").addEventListener('change', fu
     place.style.alignContent="space-evenly";
 })
 
+// Gap
+const gap = document.querySelector("#Gap");
+const gapValue = document.querySelector("#GapValue");
+gap.addEventListener('change', function(){
+    if (gap.checked == true) {
+        gapValue.disabled=false;
+        place.style.gap=gapValue.value;
+    }
+    else {
+        gapValue.disabled=true;
+        place.style.gap=0
+    }
+})
+gapValue.addEventListener('input', function(){
+    if (gap.checked == true) {
+        place.style.gap=gapValue.value;
+    }
+})
+
 window.addEventListener("load", function() {
     document.querySelector("#flexDirectionRow").click()
     document.querySelector("#flexWrapNowrap").click()
