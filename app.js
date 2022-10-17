@@ -93,6 +93,9 @@ document.querySelector("#AlignContentSpaceBetween").addEventListener('change', f
 document.querySelector("#AlignContentSpaceAround").addEventListener('change', function(){
     place.style.alignContent="space-around";
 })
+document.querySelector("#AlignContentSpaceEvenly").addEventListener('change', function(){
+    place.style.alignContent="space-evenly";
+})
 
 window.addEventListener("load", function() {
     document.querySelector("#flexDirectionRow").click()
