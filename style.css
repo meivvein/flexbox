@@ -65,10 +65,6 @@ main nav {
     overflow: scroll;
 }
 
-main img, main article div {
-    max-height: calc((var(--height) - 4px) / 4 - 2rem);
-}
-
 main article div {
     padding: 1rem;
 }
@@ -82,6 +78,7 @@ main article div:nth-child(2n+1) {
 }
 
 main img {
+    max-height: calc((var(--height) - 4px) / 4 - 2rem);
     aspect-ratio: 1 / 1;
 }
 
